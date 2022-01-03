@@ -21,7 +21,7 @@ public class BuyFlighs implements Task{
 		actor.attemptsTo(
 				WaitUntil.the(BuyFligh.BUTTON_BUY, WebElementStateMatchers.isVisible()).forNoMoreThan(5).seconds(),
 				Click.on(BuyFligh.BUTTON_BUY),
-				WaitUntil.the(BuyFligh.BUTTON_CONTINUE, WebElementStateMatchers.isVisible()).forNoMoreThan(5).seconds(),
+				WaitUntil.the(BuyFligh.BUTTON_CONTINUE, WebElementStateMatchers.isClickable()).forNoMoreThan(5).seconds(),
 				Click.on(BuyFligh.BUTTON_CONTINUE));
 		
 		}

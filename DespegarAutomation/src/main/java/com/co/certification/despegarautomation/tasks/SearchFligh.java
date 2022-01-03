@@ -29,11 +29,11 @@ private String scenarioNumber;
 	   try {
 		Data.dataLoad(scenarioNumber);
 		 String[] dateSplit = (Data.data().getDateGo().split(" ")[0]).split("/");
-		    int daySplit = 1+Integer.parseInt(dateSplit[0]);
+		    int daySplit = Integer.parseInt(dateSplit[0]);
 		    String day = Integer.toString(daySplit);
 		    
 		    String[] dateSplitReturn = (Data.data().getDateReturn().split(" ")[0]).split("/");
-		    int dayReturnSplit = 1+Integer.parseInt(dateSplitReturn[0]);
+		    int dayReturnSplit = Integer.parseInt(dateSplitReturn[0]);
 		    String dayReturn = Integer.toString(dayReturnSplit);
 		actor.attemptsTo(WaitUntil.the(DespegarHomePage.CITY_ORIGIN,WebElementStateMatchers.isEnabled()).forNoMoreThan(5).seconds(),
 				Click.on(DespegarHomePage.CITY_ORIGIN),
